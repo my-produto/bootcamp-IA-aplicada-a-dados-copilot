@@ -1,0 +1,74 @@
+// Projeto: Oficina Mecânica - Sistema de Controle de Ordens de Serviço
+// Ferramenta: dbdiagram.io
+
+Table Cliente {
+  id_cliente int [pk, increment]
+  nome varchar
+  cpf_cnpj varchar
+  tipo_cliente enum('PF', 'PJ')
+}
+
+Table Veiculo {
+  id_veiculo int [pk, increment]
+  placa varchar
+  marca varchar
+  modelo varchar
+  ano int
+  id_cliente int [ref: > Cliente.id_cliente]
+}
+
+Table Equipe {
+  id_equipe int [pk, increment]
+  nome varchar
+}
+
+Table Mecanico {
+  id_mecanico int [pk, increment]
+  nome varchar
+  endereco varchar
+  especialidade varchar
+  id_equipe int [ref: > Equipe.id_equipe]
+}
+
+Table OrdemServico {
+  id_os int [pk, increment]
+  numero_os varchar
+  data_emissao date
+  data_conclusao date
+  valor_total decimal
+  status enum('Aberta', 'Em execução', 'Concluída', 'Cancelada')
+  id_veiculo int [ref: > Veiculo.id_veiculo]
+  id_equipe int [ref: > Equipe.id_equipe]
+  autorizada bool
+}
+
+Table Servico {
+  id_servico int [pk, increment]
+  descricao varchar
+  preco_base decimal
+}
+
+Table OS_Servico {
+  id_os int [ref: > OrdemServico.id_os]
+  id_servico int [ref: > Servico.id_servico]
+  quantidade int
+  valor_total decimal
+
+  [pk: id_os, id_servico]
+}
+
+Table Peca {
+  id_peca int [pk, increment]
+  descricao varchar
+  valor_unitario decimal
+}
+
+Table OS_Peca {
+  id_os int [ref: > OrdemServico.id_os]
+  id_peca int [ref: > Peca.id_peca]
+  quantidade int
+  valor_total decimal
+
+  [pk: id_os, id_peca]
+}
+
