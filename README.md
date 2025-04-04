@@ -41,29 +41,7 @@ A modelagem deste projeto foi baseada no seguinte cenário:
 ## 🔗 Modelo EER
 
 O diagrama foi criado utilizando **dbdiagram.io**.  
-[📌 Clique aqui para visualizar o modelo no dbdiagram.io](#) _(Substitua "#" pelo link gerado na plataforma)_.
-
----
-
-## 🚀 Como Executar este Projeto no Seu GitHub
-
-### 1️⃣ Criar um Repositório no GitHub
-1. Acesse seu [GitHub](https://github.com/).
-2. Clique no botão **"New repository"**.
-3. Nomeie o repositório (exemplo: **bootcamp-ecommerce-db**).
-4. Escolha a opção **"Public"** para deixar visível para avaliações.
-5. Marque **"Add a README file"** e clique em **"Create repository"**.
-
-### 2️⃣ Editar o README.md
-1. No repositório criado, clique no arquivo **README.md**.
-2. Selecione **"Edit"** e cole o conteúdo deste arquivo.
-3. Adicione o link do diagrama gerado no **dbdiagram.io**.
-4. Clique em **"Commit changes"**.
-
-### 3️⃣ Adicionar o Script do Banco de Dados
-1. Crie um arquivo no repositório chamado **modelo.sql**.
-2. Cole o script gerado no **dbdiagram.io**.
-3. Salve e faça o commit.
+[📌 Clique aqui para visualizar o modelo no dbdiagram.io](<iframe width="560" height="315" src='https://dbdiagram.io/e/67f033de4f7afba184684726/67f033ed4f7afba18468484e'> </iframe>) _(Substitua "#" pelo link gerado na plataforma)_.
 
 ---
 
@@ -72,6 +50,6 @@ Este projeto representa um exercício prático de **modelagem EER aplicada a um 
 
 ---
 
-## 🏆 Autor
-📌 **Seu Nome Aqui**  
-🚀 **Bootcamp de Modelagem de Dados com EER**  
+## 🏆 Autora
+📌 **Myllena Fernandes**  
+🚀 **linkedin.com/fernandesmyllena**  
