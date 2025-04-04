@@ -41,7 +41,7 @@ A modelagem deste projeto foi baseada no seguinte cenário:
 ## 🔗 Modelo EER
 
 O diagrama foi criado utilizando **dbdiagram.io**.  
-[📌 Clique aqui para visualizar o modelo no dbdiagram.io](<iframe width="560" height="315" src='https://dbdiagram.io/e/67f033de4f7afba184684726/67f033ed4f7afba18468484e'> </iframe>) _(Substitua "#" pelo link gerado na plataforma)_.
+[📌 Clique aqui para visualizar o modelo no dbdiagram.io](https://dbdiagram.io/d/Projeto-modelo-ecomm-67f033de4f7afba184684726)
 
 ---
 
