@@ -60,6 +60,9 @@ O diagrama foi criado utilizando **dbdiagram.io**.
 
 O modelo lógico foi mapeado e refinado a partir do EER com uso da notação UML relacional, respeitando chaves primárias e estrangeiras, e aplicando as regras de negócio previstas no cenário. O modelo foi implementado no [DB Fiddle]([https://www.db-fiddle.com/](https://sqlfiddle.com/mysql/online-compiler?id=7224e420-016e-4298-bd86-618d899cdd54)), usando o SGBD **MySQL 8.0**.
 
+[📌 Clique aqui para visualizar o schema no dbdiagram.io](https://dbdiagram.io/d/modelo-logico-projeto-ecomm-67f6da744f7afba1840186f5)
+
+
 ---
 
 ## Script de criação do banco de dados (MySQL)
