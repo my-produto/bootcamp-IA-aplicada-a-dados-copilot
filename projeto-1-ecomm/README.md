@@ -1,26 +1,24 @@
-# 📦 Modelagem de Dados para E-Commerce - Bootcamp de Modelagem de Dados
+# 📦 Modelagem de dados para e-commerce
 
-## 📌 Sobre o Projeto
-Este projeto faz parte do **Bootcamp de Modelagem de Dados com EER (Enhanced Entity-Relationship)** e tem como objetivo aplicar os conceitos de modelagem de dados no contexto de um **e-commerce marketplace**, considerando aspectos como clientes, pedidos, pagamentos, fornecedores e estoque.
-
-A modelagem foi desenvolvida utilizando **dbdiagram.io** e reflete um esquema EER refinado, seguindo boas práticas para um banco de dados relacional.
+## Sobre o projeto
+Esta pasta contém o desenvolvimento completo de um projeto de banco de dados para um sistema de e-commerce. O projeto passa pelas etapas de modelagem conceitual (EER), modelagem lógica e implementação SQL, com inserção de dados para testes e execução de queries.
 
 ---
 
-## 📌 Sumário
+## Sumário
 
-- [Descrição do Cenário](#descrição-do-cenário)
-- [Projeto Conceitual (EER)](#projeto-conceitual-eer)
-- [Projeto Lógico (UML/Relacional)](#projeto-lógico-umlrelacional)
-- [Script de Criação do Banco de Dados (MySQL)](#script-de-criação-do-banco-de-dados-mysql)
-- [Dados de Teste](#dados-de-teste)
+- [Modelagem conceitual](#modelagem-conceitual)
+- [Estrutura do banco de dados](#estrutura-do-banco-de-dados)
+- [Projeto conceitual (EER)](#projeto-conceitual-eer)
+- [Projeto lógico (UML/Relacional)](#projeto-lógico-umlrelacional)
+- [Script de criação do banco de dados (MySQL)](#script-de-criação-do-banco-de-dados-mysql)
+- [Dados de teste](#dados-de-teste)
 - [Consultas SQL](#consultas-sql)
 
 ---
 
 
-
-## 🏗️ Modelagem Conceitual
+## Modelagem conceitual
 
 A modelagem deste projeto foi baseada no seguinte cenário:
 
@@ -34,9 +32,9 @@ A modelagem deste projeto foi baseada no seguinte cenário:
 
 ---
 
-## 📊 Estrutura do Banco de Dados
+## Estrutura do banco de dados
 
-### 📌 Principais Entidades:
+### Principais entidades:
 - **Cliente**: Armazena os dados dos clientes (CPF/CNPJ, tipo de conta).
 - **Endereço**: Relacionado ao cliente, define o local para cálculo do frete.
 - **Pedido**: Representa a compra, com status de entrega, data e valor total.
@@ -51,21 +49,20 @@ A modelagem deste projeto foi baseada no seguinte cenário:
 
 ---
 
-## 🔗 Modelo EER
+## Projeto conceitual (EER)
 
 O diagrama foi criado utilizando **dbdiagram.io**.  
 [📌 Clique aqui para visualizar o modelo no dbdiagram.io](https://dbdiagram.io/d/Projeto-modelo-ecomm-67f033de4f7afba184684726)
 
 ---
 
-
 ## Projeto lógico (UML/Relacional)
 
-O modelo lógico foi mapeado a partir do EER com uso da notação UML relacional, respeitando chaves primárias e estrangeiras, e aplicando as regras de negócio previstas no cenário. O modelo foi implementado no [DB Fiddle]([https://www.db-fiddle.com/](https://sqlfiddle.com/mysql/online-compiler?id=7224e420-016e-4298-bd86-618d899cdd54), usando o SGBD **MySQL 8.0**.
+O modelo lógico foi mapeado e refinado a partir do EER com uso da notação UML relacional, respeitando chaves primárias e estrangeiras, e aplicando as regras de negócio previstas no cenário. O modelo foi implementado no [DB Fiddle]([https://www.db-fiddle.com/](https://sqlfiddle.com/mysql/online-compiler?id=7224e420-016e-4298-bd86-618d899cdd54)), usando o SGBD **MySQL 8.0**.
 
 ---
 
-## Script de Criação do Banco de Dados (MySQL)
+## Script de criação do banco de dados (MySQL)
 
 > O script SQL está disponível no arquivo `schema.sql`. Inclui criação de tabelas com constraints adequadas, incluindo especialização via herança.
 
@@ -75,7 +72,7 @@ O modelo lógico foi mapeado a partir do EER com uso da notação UML relacional
 
 ---
 
-## Dados de Teste
+## Dados de teste
 
 > Inserções feitas no próprio DB Fiddle para validar os relacionamentos e testar as queries.
 
