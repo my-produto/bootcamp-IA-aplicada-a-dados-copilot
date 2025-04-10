@@ -12,7 +12,8 @@ O sistema simula o funcionamento de uma oficina mecânica que realiza consertos 
 
 - Representar de forma clara e completa o fluxo de uma OS;
 - Capturar os relacionamentos entre veículos, clientes, mecânicos, serviços e peças;
-- Garantir a rastreabilidade da execução dos serviços, cálculo de custos e acompanhamento do status da OS.
+- Garantir a rastreabilidade da execução dos serviços, cálculo de custos e acompanhamento do status da OS;
+- Realizar consultas SQL complexas que demonstrem domínio do modelo.
 
 ---
 
@@ -26,21 +27,63 @@ O sistema simula o funcionamento de uma oficina mecânica que realiza consertos 
 - **Serviço**: Cada OS pode conter vários serviços. Valores são definidos com base em uma tabela de referência de mão-de-obra.
 - **Peça**: Várias peças podem estar associadas a uma OS.
 - **Tabela de mão de obra**: Usada como referência para precificação dos serviços.
+- **Pagamento**: Clientes podem cadastrar mais de uma forma de pagamento.
+- **Entrega**: Cada OS possui um status e um código de rastreio.
 
 ---
 
-## 📄 Arquivos no diretório
+## 🔧 Projeto lógico
 
-- `modelo.dbml`: Arquivo com o script do modelo conceitual para ser visualizado no [dbdiagram.io](https://dbdiagram.io/)
-- `README.md`: Este arquivo de descrição com o contexto e explicações do projeto
+O modelo conceitual foi traduzido para um **esquema lógico relacional**, e implementado em SQL com base nos seguintes princípios:
+
+- **Chaves primárias** e **estrangeiras** definidas com clareza;
+- **Relacionamentos N:N** transformados em tabelas associativas (`OS_Servico`, `OS_Peca`);
+- Uso de tipos de dados apropriados, como `ENUM`, `DATE`, `BOOLEAN`, `DECIMAL`;
+- Normalização adequada para evitar redundâncias e permitir escalabilidade.
 
 ---
 
-## 🚀 Próximos passos
+## 🧪 Testes e consultas
 
-- Expandir o modelo com dados de pagamento e controle de estoque.
-- Implementar controle de versões e melhorias futuras no esquema.
-- Criar scripts SQL a partir do modelo conceitual para futura implementação física.
+Foram criadas queries SQL com foco nas cláusulas e instruções:
+
+- `SELECT`, `WHERE`, `ORDER BY`, `HAVING`, expressões com alias (`AS`);
+- Cálculo de valores derivados;
+- Junções (`JOIN`) entre tabelas para análises mais completas.
+
+---
+
+## 📂 Estrutura de arquivos no diretório
+
+| Arquivo                     | Descrição                                                                 |
+|----------------------------|---------------------------------------------------------------------------|
+| `projeto conceitual oficina.dbml`              | Script do modelo conceitual no formato dbdiagram.io                       |
+| `modelo lógico projeto oficina.png`           | Imagem do modelo conceitual (versão visual)                    |
+| `projeto logico oficina.dbml`              | Script do modelo lógico no formato dbdiagram.io                       |
+| `modelo lógico projeto oficina.png`           | Imagem do modelo UML (versão visual do projeto lógico)                    |
+| `create.sql`               | Script com a criação do banco e tabelas                                   |
+| `inserts.sql`              | Script com os dados de teste inseridos nas tabelas                        |
+| `queries.sql`              | Script com consultas SQL complexas realizadas a partir dos dados inseridos|
+| `README.md`                | Este arquivo de descrição com contexto, estrutura e aprendizados          |
+
+---
+
+## ✅ Etapas concluídas
+
+- [x] Criação do modelo conceitual com EER
+- [x] Conversão para modelo lógico relacional
+- [x] Implementação física com SQL
+- [x] Inserção de dados para teste
+- [x] Execução de consultas SQL com múltiplas cláusulas
+- [x] Organização completa em repositório GitHub
+
+---
+
+## 💡 Próximos passos
+
+- Expandir o modelo com controle de estoque de peças e agendamentos;
+- Adicionar versionamento ao repositório com histórico de melhorias;
+- Automatizar a geração de relatórios por OS ou cliente.
 
 ---
 
@@ -48,7 +91,9 @@ O sistema simula o funcionamento de uma oficina mecânica que realiza consertos 
 
 Com este exercício, foi possível praticar:
 
-- Criação de entidades e relacionamentos complexos
-- Utilização de relacionamentos muitos-para-muitos
-- Aplicação de boas práticas de modelagem conceitual com EER
-- Organização de projetos de dados em repositórios do GitHub
+- Criação de entidades e relacionamentos complexos no modelo conceitual;
+- Transformação de modelo EER em modelo lógico com estrutura relacional;
+- Elaboração de consultas SQL com múltiplas cláusulas e relacionamentos;
+- Organização de projetos de dados com boas práticas no GitHub.
+
+---
