@@ -1,0 +1,99 @@
+Project "Oficina Mecânica" {
+  database_type: "PostgreSQL"
+}
+
+Table cliente {
+  id_cliente int [pk, increment]
+  nome varchar
+  cpf_cnpj varchar
+  tipo_cliente varchar
+}
+
+Table veiculo {
+  id_veiculo int [pk, increment]
+  placa varchar
+  marca varchar
+  modelo varchar
+  ano int
+  id_cliente int [ref: > cliente.id_cliente]
+}
+
+Table equipe {
+  id_equipe int [pk, increment]
+  nome varchar
+}
+
+Table mecanico {
+  id_mecanico int [pk, increment]
+  nome varchar
+  endereco varchar
+  especialidade varchar
+  id_equipe int [ref: > equipe.id_equipe]
+}
+
+Table ordem_servico {
+  id_os int [pk, increment]
+  numero_os varchar
+  data_emissao date
+  data_conclusao date
+  valor_total decimal
+  status varchar
+  autorizada boolean
+  id_veiculo int [ref: > veiculo.id_veiculo]
+  id_equipe int [ref: > equipe.id_equipe]
+}
+
+Table servico {
+  id_servico int [pk, increment]
+  descricao varchar
+  preco_base decimal
+}
+
+Table os_servico {
+  id_os int [ref: > ordem_servico.id_os]
+  id_servico int [ref: > servico.id_servico]
+  quantidade int
+  valor_total decimal
+
+  indexes {
+    (id_os, id_servico) [pk]
+  }
+}
+
+Table peca {
+  id_peca int [pk, increment]
+  descricao varchar
+  valor_unitario decimal
+}
+
+Table os_peca {
+  id_os int [ref: > ordem_servico.id_os]
+  id_peca int [ref: > peca.id_peca]
+  quantidade int
+  valor_total decimal
+
+  indexes {
+    (id_os, id_peca) [pk]
+  }
+}
+
+Table forma_pagamento {
+  id_pagamento int [pk, increment]
+  tipo_pagamento varchar
+}
+
+Table os_pagamento {
+  id_os int [ref: > ordem_servico.id_os]
+  id_pagamento int [ref: > forma_pagamento.id_pagamento]
+
+  indexes {
+    (id_os, id_pagamento) [pk]
+  }
+}
+
+Table entrega {
+  id_entrega int [pk, increment]
+  codigo_rastreio varchar
+  status varchar
+  id_os int [ref: > ordem_servico.id_os]
+}
